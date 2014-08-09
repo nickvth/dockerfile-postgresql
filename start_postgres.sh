@@ -1,4 +1,4 @@
-# if exit is non-zero script will stop.
+# if exit number is non-zero script will stop.
 set -e
 
 # Set DATA_DIR variable to check if exist.

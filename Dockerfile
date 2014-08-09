@@ -27,7 +27,7 @@ RUN echo 'root:secret' | chpasswd
 RUN echo 'test:test1234' | chpasswd
 RUN echo '%wheel ALL=(ALL) ALL' >> /etc/sudoers
 
-# Add default postgresql configs. 
+# Add default postgresql configs and chown.
 ADD pg_hba.conf /var/lib/pgsql/pg_hba.conf
 ADD postgresql.conf /var/lib/pgsql/postgresql.conf
 RUN chown postgres:postgres /var/lib/pgsql/*.conf
