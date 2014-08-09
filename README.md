@@ -26,4 +26,4 @@ ssh test@[ip] -p32
 
 Password for user postgres see alter_postgresdb_user.sh script.
 
-password os user test or root see Dockerfile.
+Password os user test or root see Dockerfile.
