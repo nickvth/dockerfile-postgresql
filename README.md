@@ -5,7 +5,7 @@ Dockerfile for postgresql and data outside the container.
 
 Postgresql 9.3 is used.
 
-== Usage ==
+<b>Usage</b>
 
 <pre>
 cd /tmp/
