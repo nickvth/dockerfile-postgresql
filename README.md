@@ -20,7 +20,7 @@ docker run -t -d --name="postdb1" -p [ip or empty]:32:22 -p [ip or empty]:5432:5
 /usr/bin/supervisord -c /etc/supervisord.conf
 psql -p 5432 -h [ip or localhost] -d postgres -U postgres
 
-ssh test@[ip] -p32 
+ssh test@[ip or localhost] -p32 
 
 </pre>
 
