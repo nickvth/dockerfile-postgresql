@@ -57,27 +57,3 @@ then
 else 
         sed -ri "s/.*max_connections =.*/max_connections = $POSTGRES_BACKENDS/" "$PGDATA"/postgresql.conf
 fi 
-
-
-
-
-
-
-# Future feature maybe pg_statsinfo
-#------------------------------------------------------------------------------
-# pg_statsinfo
-#------------------------------------------------------------------------------
-#not needed anymore in 9.2 or 9.3
-#custom_variable_classes = 'pg_statsinfo'
-
-#remote repository is not working yet.
-#pg_statsinfo.repository_server = 'hostaddr=repappdev1.enovation.dev port=5432 user=statsinfo dbname=pentahodb'
-#pg_statsinfo.snapshot_interval = 30min          # set snapshot interval
-#pg_statsinfo.enable_maintenance = 'on'          # enable maintenance mode('on' or 'off')
-#pg_statsinfo.maintenance_time = '00:02:00'      # Delete old snapshots every day in this time.
-#pg_statsinfo.repository_keepday = 30 # production use 30 days
-#pg_statsinfo.syslog_min_messages = 'error'
-#pg_statsinfo.textlog_line_prefix = '%t %p %c-%l %x %q(%u, %d, %r, %a) '  # This format is same as syslog's format.
-#pg_statsinfo.syslog_line_prefix = '%t %p %c-%l %x %q(%u, %d, %r, %a) '   # This format is same as syslog's format.
-#pg_statsinfo.excluded_dbnames = 'template0, template1'
-#shared_preload_libraries = 'pg_statsinfo, pg_stat_statements'
