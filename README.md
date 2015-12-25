@@ -11,6 +11,8 @@ Based on official docker postgres 'debian wheezy'
 
 https://registry.hub.docker.com/_/postgres/
 
+Automated Build at docker hub: https://hub.docker.com/r/nickvth/dockerfile-postgresql/
+
 <b>Usage</b>
 
 docker pull
