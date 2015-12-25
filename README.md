@@ -13,13 +13,10 @@ https://registry.hub.docker.com/_/postgres/
 
 <b>Usage</b>
 
-Build your own image
+docker pull
 
 ```
-cd dockerfile-postgresql/[version]
-docker build --force-rm=true --no-cache=true -t [image]:[version] .
-docker tag --help
-docker push --help
+docker pull nickvth/postgresql:[version]
 ```
 
 Start container(s)
@@ -35,7 +32,7 @@ POSTGRES_MEMORY --> postgresql shared_buffers 'each version has it's own default
 mkdir -p /postdb1/data
 mkdir -p /postdb1/wal
 chcon -Rt svirt_sandbox_file_t /postdb1 "fix selinux"
-docker run -t -d --name postdb1 -p [ip or empty]:5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=mysecretpassword -e POSTGRES_ARCHIVE=archive -e POSTGRES_BACKENDS=200 -e POSTGRES_MEMORY=256MB -v /postdb1/data:/var/lib/postgresql/data -v /postdb1/wal:/var/lib/postgresql/wal [image]:[version]  
+docker run -t -d --name postdb1 -p [ip or empty]:5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=mysecretpassword -e POSTGRES_ARCHIVE=archive -e POSTGRES_BACKENDS=200 -e POSTGRES_MEMORY=256MB -v /postdb1/data:/var/lib/postgresql/data -v /postdb1/wal:/var/lib/postgresql/wal nickvth/postgresql:[version]  
 psql -p 5432 -h [ip or localhost] -d postgres -U postgres
 ```
 
@@ -52,3 +49,13 @@ docker exec -it postdb1 psql -U postgres
 ```
 
 Backup script template for continuous archiving see scripts dir. You can setup a cronjob for it.
+
+Build your own image
+
+```
+git clone https://github.com/nickvth/dockerfile-postgresql
+cd dockerfile-postgresql/[version]
+docker build --force-rm=true --no-cache=true -t [image]:[version] .
+docker tag --help
+docker push --help
+```
