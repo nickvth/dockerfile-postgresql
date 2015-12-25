@@ -40,7 +40,7 @@ psql -p 5432 -h [ip or localhost] -d postgres -U postgres
 ```
 
 When you start the container, check with ```docker logs postdb1``` if everything is started succesfully
-Then all steps are done and PostgreSQL is ready to use 
+
 Data is outside the container in /postdb1
 
 With docker 1.3 you can connect inside an running container, so ssh is no longer needed
