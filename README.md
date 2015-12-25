@@ -53,7 +53,7 @@ Backup script template for continuous archiving see scripts dir. You can setup a
 Build your own image
 
 ```
-git clone https://github.com/nickvth/dockerfile-postgresql
+git clone https://github.com/nickvth/dockerfile-postgresql.git
 cd dockerfile-postgresql/[version]
 docker build --force-rm=true --no-cache=true -t [image]:[version] .
 docker tag --help
