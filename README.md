@@ -16,7 +16,7 @@ https://registry.hub.docker.com/_/postgres/
 docker pull
 
 ```
-docker pull nickvth/postgresql:[version]
+docker pull nickvth/dockerfile-postgresql:[version]
 ```
 
 Start container(s)
@@ -32,7 +32,7 @@ POSTGRES_MEMORY --> postgresql shared_buffers 'each version has it's own default
 mkdir -p /postdb1/data
 mkdir -p /postdb1/wal
 chcon -Rt svirt_sandbox_file_t /postdb1 "fix selinux"
-docker run -t -d --name postdb1 -p [ip or empty]:5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=mysecretpassword -e POSTGRES_ARCHIVE=archive -e POSTGRES_BACKENDS=200 -e POSTGRES_MEMORY=256MB -v /postdb1/data:/var/lib/postgresql/data -v /postdb1/wal:/var/lib/postgresql/wal nickvth/postgresql:[version]  
+docker run -t -d --name postdb1 -p [ip or empty]:5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=mysecretpassword -e POSTGRES_ARCHIVE=archive -e POSTGRES_BACKENDS=200 -e POSTGRES_MEMORY=256MB -v /postdb1/data:/var/lib/postgresql/data -v /postdb1/wal:/var/lib/postgresql/wal nickvth/dockerfile-postgresql:[version]  
 psql -p 5432 -h [ip or localhost] -d postgres -U postgres
 ```
 
