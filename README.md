@@ -50,7 +50,7 @@ docker exec -it postdb1 bash
 docker exec -it postdb1 psql -U postgres
 ```
 
-Backup script template for continuous archiving see scripts dir. You can setup a cronjob for it.
+Backup script template for backup with continuous archiving, see scripts directory
 
 Build your own image
 
