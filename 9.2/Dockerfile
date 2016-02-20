@@ -1,5 +1,5 @@
 
-FROM postgres:9.2.14
+FROM postgres:9.2.15
 ADD initdb.sh /docker-entrypoint-initdb.d/
 RUN chmod +x /docker-entrypoint-initdb.d/initdb.sh 
 RUN sed -i "/postgres \/run\/postgresql/a  chown -R postgres /var/lib/postgresql" /docker-entrypoint.sh
