@@ -42,7 +42,7 @@ When you start the container, check with ```docker logs postdb1``` if everything
 
 Data is outside the container in /postdb1
 
-From docker 1.3 you can connect inside an running container, so ssh is no longer needed
+From docker 1.3 you can connect inside a running container, so ssh is no longer needed
 
 ```
 docker exec -it postdb1 bash
