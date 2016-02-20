@@ -2,10 +2,10 @@
 
 Dockerfile for postgresql, data outside the container and extra ENVIRONMENT VARIABLES.
 
-- [`9.1.19`, `9.1` (*9.1/Dockerfile*)]
-- [`9.2.14`, `9.2` (*9.2/Dockerfile*)]
-- [`9.3.10`, `9.3` (*9.3/Dockerfile*)]
-- [`9.4.5`, `9.4`, `9`, `latest` (*9.4/Dockerfile*)]
+- [`9.1.20`, `9.1` (*9.1/Dockerfile*)]
+- [`9.2.15`, `9.2` (*9.2/Dockerfile*)]
+- [`9.3.11`, `9.3` (*9.3/Dockerfile*)]
+- [`9.4.6`, `9.4`, `9`, `latest` (*9.4/Dockerfile*)]
 
 Based on official docker postgres 'debian wheezy'
 
